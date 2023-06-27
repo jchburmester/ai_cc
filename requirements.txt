@@ -1,0 +1,11 @@
+pyyaml
+requests==2.31.0
+pandas
+matplotlib
+seaborn
+numpy
+requests-ratelimiter
+SQLAlchemy==2.0.9
+psycopg2-binary
+python-dotenv
+joblib
