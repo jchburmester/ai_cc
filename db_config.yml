@@ -1,0 +1,6 @@
+PG_USER: postgres
+PG_PASSWORD: ai_cc_23
+PG_HOST: localhost
+PG_PORT: 5432
+PG_DATABASE: ai_cc
+SQL_DEBUG: false
