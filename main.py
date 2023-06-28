@@ -5,7 +5,8 @@ import yaml
 
 from src.ScopusCrawlerDB import ScopusCrawlerDB
 from src.classes import NoMoreKeysException
-from src.utils import get_all_author_ids_from_db_with_null_data 
+
+logging.config.fileConfig("log.ini", disable_existing_loggers=False)
 
 logger = logging.getLogger(__name__)
 
@@ -20,10 +21,11 @@ if __name__ == "__main__":
 
     logger.info(f"Starting search with n={len(keywords)} keywords")
 
-    crawler = ScopusCrawlerDB(key_data)
+    crawler = ScopusCrawlerDB(key_data['API_Keys'])
 
     # for k in keywords:
     try:
+        # start with 2024 to ensure shorter list for testing
         for y in range(2024, 2024):
             for papers, query_list in crawler.search_papers(keywords, doc_types, min_year=y, max_year=y, min_pages=-1, intersect_keywords=False, top_n=None, batch_keywords=1):
                 if not papers:
@@ -33,3 +35,6 @@ if __name__ == "__main__":
 
     except NoMoreKeysException:
         logger.debug("No more API-keys for paper retrieval. Quota exhausted. Finishing.")
+
+    # See when it's possible to restart it
+    crawler.print_reset_dates()

@@ -1,0 +1,17 @@
+name: ai_cc
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - pyyaml
+    - requests==2.31.0
+    - pandas
+    - matplotlib
+    - seaborn
+    - numpy
+    - tqdm
+    - requests-ratelimiter
+    - SQLAlchemy==2.0.9
+    - psycopg2-binary
+    - python-dotenv
+    - joblib

@@ -14,6 +14,9 @@ from sqlalchemy.dialects.postgresql import insert
 from tqdm import tqdm
 from urllib3.exceptions import MaxRetryError, NewConnectionError
 
+from db_wrapper import DBwrapper, SafeSession
+from BaseScopusCrawler import BaseScopusCrawler
+from classes import FetchException, ScopusCounter
 
 
 
