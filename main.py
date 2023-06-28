@@ -21,25 +21,15 @@ if __name__ == "__main__":
     logger.info(f"Starting search with n={len(keywords)} keywords")
 
     crawler = ScopusCrawlerDB(key_data)
-    # c = ScopusCounter()
 
     # for k in keywords:
     try:
-        for y in range(2000, 2024):
+        for y in range(2024, 2024):
             for papers, query_list in crawler.search_papers(keywords, doc_types, min_year=y, max_year=y, min_pages=-1, intersect_keywords=False, top_n=None, batch_keywords=1):
                 if not papers:
                     continue
                 logger.debug(f"Found {len(papers)} papers")
                 crawler.save_paper_data_from_entries(papers, search_queries=query_list)
-
-                # Check keywords are present for all papers
-                # with SafeSession(crawler._db, logger) as session:
-                #     all_papers_stmt = text(
-                #         "SELECT count(DISTINCT paper_id) FROM papers LEFT JOIN matching USING (paper_id) WHERE keyword_id IS NULL")
-                #     q = session.execute(all_papers_stmt).all()
-                # q = q[0][0]
-                # print(q)
-                # assert not q or q == 0, f"No k list: {q}"
 
     except NoMoreKeysException:
         logger.debug("No more API-keys for paper retrieval. Quota exhausted. Finishing.")
