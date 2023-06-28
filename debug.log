@@ -1,0 +1,1103 @@
+2023-06-28 17:29:29,647 loglevel=INFO   logger=__main__ <module>() L21   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L21  
+2023-06-28 17:29:29,938 loglevel=ERROR  logger=__main__ <module>() L28   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 26, in <module>
+    crawler.fetch(keywords, doc_types)
+TypeError: fetch() missing 1 required positional argument: 'year_range'
+   call_trace=c:/Users/jch/ai_cc/main.py L28  
+2023-06-28 17:31:02,534 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:31:02,768 loglevel=INFO   logger=DBCrawler fetch() L44   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L44  
+2023-06-28 17:31:02,786 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:31:05,439 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:31:05,628 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 47, in fetch
+    for record in page['search-results']['entry']:
+TypeError: string indices must be integers
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:32:39,596 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:32:39,838 loglevel=INFO   logger=DBCrawler fetch() L44   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L44  
+2023-06-28 17:32:39,851 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:32:42,858 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:32:42,865 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 48, in fetch
+    for record in page['search-results']['entry']:
+TypeError: string indices must be integers
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:35:20,117 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:35:20,362 loglevel=INFO   logger=DBCrawler fetch() L44   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L44  
+2023-06-28 17:35:20,373 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:35:23,458 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:35:24,257 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 48, in fetch
+    for record in page['search-results']['entry']:
+TypeError: string indices must be integers
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:37:26,638 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:37:26,858 loglevel=INFO   logger=DBCrawler fetch() L44   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L44  
+2023-06-28 17:37:26,872 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:37:29,342 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:37:29,349 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 48, in fetch
+    for record in page['search-results']['entry']:
+TypeError: string indices must be integers
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:38:24,026 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:38:24,348 loglevel=INFO   logger=DBCrawler fetch() L44   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L44  
+2023-06-28 17:38:24,363 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:38:26,707 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:38:26,911 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 48, in fetch
+    for record in page['search-results']['entry']:
+TypeError: string indices must be integers
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:45:20,448 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:45:20,682 loglevel=INFO   logger=DBCrawler fetch() L60   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L60  
+2023-06-28 17:45:20,688 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:45:23,300 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:45:23,578 loglevel=ERROR  logger=__main__ <module>() L30   Traceback (most recent call last):
+  File "c:/Users/jch/ai_cc/main.py", line 28, in <module>
+    crawler.fetch(keywords, doc_types, year_range)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 62, in fetch
+    for record in self._scopus_search(keyword, doc_type):
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 54, in _scopus_search
+    yield self.parse_article(article)
+  File "c:\Users\jch\ai_cc\DBCrawler.py", line 73, in parse_article
+    'authors': [author['ce:indexed-name'] for author in article['author']],
+KeyError: 'author'
+   call_trace=c:/Users/jch/ai_cc/main.py L30  
+2023-06-28 17:47:50,333 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 17:47:50,568 loglevel=INFO   logger=DBCrawler fetch() L60   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L60  
+2023-06-28 17:47:50,577 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 17:47:52,898 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:47:55,254 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:47:57,178 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:47:59,369 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:01,758 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:03,937 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:06,256 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:08,198 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:10,238 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:11,808 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:13,398 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:14,978 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:16,666 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:18,448 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:20,388 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 17:48:23,164 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:15,446 loglevel=INFO   logger=__main__ <module>() L23   Starting search with n=6 keywords   call_trace=c:/Users/jch/ai_cc/main.py L23  
+2023-06-28 18:03:15,673 loglevel=INFO   logger=DBCrawler fetch() L60   Fetching data for keyword ("artificial intelligence" OR "artificial" OR "ai") AND "climate change" and doc_type ar   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L60  
+2023-06-28 18:03:15,680 loglevel=DEBUG  logger=urllib3.connectionpool _new_conn() L1048 Starting new HTTPS connection (1): api.elsevier.com:443   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L1048
+2023-06-28 18:03:18,320 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:18,439 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,449 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,450 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,452 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,453 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,456 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,458 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,461 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,462 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,464 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,465 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,467 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,468 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,470 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,471 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,473 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,475 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,479 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,480 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,484 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,485 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,488 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,489 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,491 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,493 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,496 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,498 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,502 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,504 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,506 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,507 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,510 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,511 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,515 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,517 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,520 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,521 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,523 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,524 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,527 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,529 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,533 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,535 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,537 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,538 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,540 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,541 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,544 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,546 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,552 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,553 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,555 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,556 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,558 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,559 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,563 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,564 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,568 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,569 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,571 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,572 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,574 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,575 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,579 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,580 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,584 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,585 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,588 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,588 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,590 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,591 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,594 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,596 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,600 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,602 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,604 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,604 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,607 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,608 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,611 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,612 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,617 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,618 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,621 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,621 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,623 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,624 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,627 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,628 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,632 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,634 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,637 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,637 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,639 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,640 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,642 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,644 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,648 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,650 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,653 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,653 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,655 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,656 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,659 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,661 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,664 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,666 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,669 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,670 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,672 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,673 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,675 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,677 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,681 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,683 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,686 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,687 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,689 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,690 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,692 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,693 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,697 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,699 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,702 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,703 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,705 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,706 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,708 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,709 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,713 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,715 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,719 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,719 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,721 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,722 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,724 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,725 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,729 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,730 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,735 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,736 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,737 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,738 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,740 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,741 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,744 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,746 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,749 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,750 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,752 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,753 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,756 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,757 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,761 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,763 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,766 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,767 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,769 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,770 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,772 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,773 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,775 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,776 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,781 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,782 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,786 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,787 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,789 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,790 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,793 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,794 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,798 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,800 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,803 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,804 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,806 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,807 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,810 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,812 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,816 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,817 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,820 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,821 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,823 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,824 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,826 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,829 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,832 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,834 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,837 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,838 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,840 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,841 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,844 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,846 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,850 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,852 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,854 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:18,855 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:18,857 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:20,883 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:20,980 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:20,988 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:20,989 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:20,991 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:20,992 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:20,994 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:20,995 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,000 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,001 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,004 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,005 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,007 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,008 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,010 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,011 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,013 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,015 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,017 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,018 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,019 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,019 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,023 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,025 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,029 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,030 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,033 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,034 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,037 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,037 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,040 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,042 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,045 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,048 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,051 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,052 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,054 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,055 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,059 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,060 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,064 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,066 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,068 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,069 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,071 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,073 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,077 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,078 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,082 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,084 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,086 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,088 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,091 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,092 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,097 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,098 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,101 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,102 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,104 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,105 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,108 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,110 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,113 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,114 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,116 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,117 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,119 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,120 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,123 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,125 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,129 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,130 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,133 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,134 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,136 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,136 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,139 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,141 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,145 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,146 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,150 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,151 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,153 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,154 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,156 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,157 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,161 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,164 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,167 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,168 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,170 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,171 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,173 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,175 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,180 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,181 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,184 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,185 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,187 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,187 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,190 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,191 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,195 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,197 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,200 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,201 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,203 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,203 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,205 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,206 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,210 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,211 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,216 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,217 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,219 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,219 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,221 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,222 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,225 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,227 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,231 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,232 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,235 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,236 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,238 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,239 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,242 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,243 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,247 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,249 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,251 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,252 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,253 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,254 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,256 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,258 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,261 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,267 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,300 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,301 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,303 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,304 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,306 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,308 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,311 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,313 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,316 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,317 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,319 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,320 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,322 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,323 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,327 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,329 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,332 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,333 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,335 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,336 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,338 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,339 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,343 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,345 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,347 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,348 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,350 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,351 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,353 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,354 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,356 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,358 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,361 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,363 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,365 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,366 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,369 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,370 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,372 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,374 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,378 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,379 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,383 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,384 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,386 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,387 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,389 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,391 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,394 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,396 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,399 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,399 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,402 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,402 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,404 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,405 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,408 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,410 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,412 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,413 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,415 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:21,416 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:21,418 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,888 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:23,892 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,895 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,896 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,898 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,899 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,901 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,902 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,904 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,905 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,908 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,910 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,914 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,914 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,917 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,917 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,919 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,920 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,923 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,924 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,926 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,927 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,930 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,931 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,934 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,936 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,940 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,941 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,943 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,944 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,946 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,947 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,951 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,953 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,957 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,958 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,960 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,961 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,963 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,965 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,969 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,971 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,974 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,975 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,977 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,978 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,980 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,982 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,986 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,988 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,991 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,991 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,993 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,994 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:23,996 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:23,997 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,001 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,003 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,007 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,008 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,009 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,010 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,014 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,016 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,019 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,021 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,024 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,025 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,027 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,028 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,030 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,032 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,036 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,038 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,041 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,041 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,043 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,044 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,046 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,047 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,051 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,052 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,056 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,058 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,059 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,060 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,062 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,063 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,066 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,068 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,072 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,073 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,075 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,076 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,078 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,079 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,082 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,084 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,088 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,089 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,091 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,092 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,094 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,095 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,098 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,099 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,103 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,105 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,108 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,109 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,111 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,111 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,114 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,116 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,119 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,121 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,124 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,125 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,127 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,131 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,135 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,136 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,140 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,141 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,145 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,153 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,157 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,158 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,160 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,161 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,163 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,164 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,168 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,169 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,172 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,173 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,175 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,176 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,179 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,181 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,185 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,186 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,190 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,191 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,193 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,194 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,196 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,198 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,202 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,204 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,208 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,208 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,211 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,211 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,214 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,216 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,220 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,222 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,226 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,228 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,233 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,235 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,239 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,240 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,243 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,244 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,246 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,247 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,251 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,253 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,257 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,258 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,261 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,261 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,264 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,265 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,270 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,272 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,275 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,276 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,278 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,278 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,281 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,283 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,287 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,289 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,291 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,292 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,294 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,295 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,297 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,298 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,302 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,304 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,307 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,308 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,310 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,311 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,313 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:24,315 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:24,320 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,046 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:26,061 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,065 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,066 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,068 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,069 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,071 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,073 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,077 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,079 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,081 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,081 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,081 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,081 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,088 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,090 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,092 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,093 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,096 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,097 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,099 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,100 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,102 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,104 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,108 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,110 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,113 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,114 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,116 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,117 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,120 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,122 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,125 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,127 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,131 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,132 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,134 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,135 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,138 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,140 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,144 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,145 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,148 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,149 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,151 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,152 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,155 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,157 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,161 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,162 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,166 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,166 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,169 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,170 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,174 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,177 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,180 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,181 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,183 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,183 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,185 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,186 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,190 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,192 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,195 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,196 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,198 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,199 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,201 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,202 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,206 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,208 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,212 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,213 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,215 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,216 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,218 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,219 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,222 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,224 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,228 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,230 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,232 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,233 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,235 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,236 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,240 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,241 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,245 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,247 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,249 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,250 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,252 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,253 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,256 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,257 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,260 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,262 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,265 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,267 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,269 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,270 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,274 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,275 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,278 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,283 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,286 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,287 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,291 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,293 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,296 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,297 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,299 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,300 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,303 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,304 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,308 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,310 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,313 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,314 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,316 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,317 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,319 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,321 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,325 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,326 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,330 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,331 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,332 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,333 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,335 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,343 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,364 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,371 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,385 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,386 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,390 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,392 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,396 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,397 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,400 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,401 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,403 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,404 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,408 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,410 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,413 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,414 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,433 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,434 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,436 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,437 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,441 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,443 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,447 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,448 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,450 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,451 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,453 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,455 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,459 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,461 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,464 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,465 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,467 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,468 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,470 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,472 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,475 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,476 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,478 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,478 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,480 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,481 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,483 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,484 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,486 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,488 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,492 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,493 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,496 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,497 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,498 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,499 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,501 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,502 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,505 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,507 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,510 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,511 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,513 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,514 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,516 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,517 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,519 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,520 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,523 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,524 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,526 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:26,526 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:26,528 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,234 loglevel=DEBUG  logger=urllib3.connectionpool _make_request() L546  https://api.elsevier.com:443 "GET /content/search/scopus?query=%28%22artificial+intelligence%22+OR+%22artificial%22+OR+%22ai%22%29+AND+%22climate+change%22+AND+DOCTYPE%28ar%29&count=100&view=STANDARD HTTP/1.1" 200 None   call_trace=C:\Users\jch\anaconda3\envs\ai_cc\lib\site-packages\urllib3\connectionpool.py L546 
+2023-06-28 18:03:28,234 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,234 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,234 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,251 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,252 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,254 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,255 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,258 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,259 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,263 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,265 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,268 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,268 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,270 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,271 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,273 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,274 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,277 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,278 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,281 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,282 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,284 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,286 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,289 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,290 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,293 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,294 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,296 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,297 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,300 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,301 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,306 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,307 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,311 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,313 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,315 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,316 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,319 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,321 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,324 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,325 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,327 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,328 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,331 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,332 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,335 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,338 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,341 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,342 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,345 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,347 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,349 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,351 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,355 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,357 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,361 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,362 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,364 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,365 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,366 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,368 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,372 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,373 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,377 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,378 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,380 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,381 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,383 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,385 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,389 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,391 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,394 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,395 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,397 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,398 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,401 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,403 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,407 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,408 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,410 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,411 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,413 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,414 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,417 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,419 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,422 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,424 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,426 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,427 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,429 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,430 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,432 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,434 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,439 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,440 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,444 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,445 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,447 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,448 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,450 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,451 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,456 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,458 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,461 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,462 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,464 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,465 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,468 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,469 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,473 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,474 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,476 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,477 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,479 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,480 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,482 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,484 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,488 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,489 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,492 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,493 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,495 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,496 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,499 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,500 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,504 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,506 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,509 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,511 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,514 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,515 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,517 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,519 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,522 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,524 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,527 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,528 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,530 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,531 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,533 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,535 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,539 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,541 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,544 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,545 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,547 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,547 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,549 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,550 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,555 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,556 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,560 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,561 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,563 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,564 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,566 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,567 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,570 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,572 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,576 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,577 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,579 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,579 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,581 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,582 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,586 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,588 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,592 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,593 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,595 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,595 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,597 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,598 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,601 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,603 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,606 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,607 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,610 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,610 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,612 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,613 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,616 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,618 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,621 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,623 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,626 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,627 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,629 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,631 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,634 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,636 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,639 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,641 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,644 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,644 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,647 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,648 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,651 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  
+2023-06-28 18:03:28,652 loglevel=INFO   logger=DBCrawler fetch() L63   Processing record   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L63  
+2023-06-28 18:03:28,657 loglevel=INFO   logger=DBCrawler fetch() L65   Data written to the database   call_trace=c:\Users\jch\ai_cc\DBCrawler.py L65  

@@ -36,13 +36,14 @@ class ScopusCrawler:
                 }
             )
             response.raise_for_status() 
-            return response.json()
+            return response.json()  
         
         except requests.exceptions.HTTPError as err:
             if response.status_code == 429 and "Quota Exceeded" in response.text:
-                self.rotate_key() 
+                self.rotate_key()
                 return self.search_articles(keyword, count)
             else:
                 raise err
-
-
+        except Exception as err:
+            print(response.text)  # Print the response text
+            raise err
