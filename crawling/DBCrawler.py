@@ -70,19 +70,24 @@ class DBCrawler(ScopusCrawler):
                 record_count = 0
                 for record in self._scopus_search(keyword, doc_type, limit):
                     logger.info("Processing record", extra={'handler': 'progressHandler'})
-                    self.write_to_db(record)
-                    record_count += 1
-                    # Log progress
-                    logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
-                    logger.info("Data written to the database", extra={'handler': 'progressHandler'})
+                    if self.validate_record(record):
+                        self.write_to_db(record)
+                        record_count += 1
+                        # Log progress
+                        logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
+                        logger.info("Data written to the database", extra={'handler': 'progressHandler'})
+                    else:
+                        logger.warning("Invalid record. Skipping...", extra={'handler': 'progressHandler'})
             except RequestException as e:
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
                 continue
+
 
     def parse_article(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
         Extract and format the relevant fields from a Scopus article
         """
+
         parsed_article = {}
 
         # Extract 'authors' field if present
@@ -106,8 +111,12 @@ class DBCrawler(ScopusCrawler):
         # Extract 'paper_abstract' field if present
         parsed_article['paper_abstract'] = article.get('dc:description')
 
+        print("Abstract:", parsed_article['paper_abstract'])
+
         # Extract 'keywords' field if present
         parsed_article['keywords'] = article.get('authkeywords')
+
+        print("Keywords:", parsed_article['keywords'])
 
         # Extract 'subject_area' field if present
         if 'subject-area' in article:
@@ -115,10 +124,20 @@ class DBCrawler(ScopusCrawler):
 
         return parsed_article
 
-
+    # not working
     def check_database_entries(self):
         with self.db_engine.connect() as conn:
-            count_alias = func.count().label('count')
-            query = select([count_alias]).select_from(self.table)
-            result = conn.execute(query).scalar()
+            query = select([func.count()]).select_from(self.table).scalar()
+            result = conn.execute(query)
         return result
+    
+    # validating results
+    def validate_record(self, record: Dict[str, Any]) -> bool:
+    # Perform validation checks on the record
+        print(record)
+        if 'paper_title' not in record or 'paper_abstract' not in record or 'subject_area' not in record:
+            return False
+        
+        # Additional validation checks if needed
+        
+        return True
