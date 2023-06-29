@@ -39,14 +39,15 @@ class DBCrawler(ScopusCrawler):
             logger.error(f"Failed to write data to the database: {e}")
             raise
 
-    def _scopus_search(self, keyword: str, doc_type: str, limit: int = None) -> Generator[Dict[str, Any], None, None]:
+    def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
         count = 100
         total_results = None
         processed_count = 0
 
         while total_results is None or page * count < total_results:
-            result = self.search_articles(f"{keyword} AND DOCTYPE({doc_type})", count)
+            query = f"{keyword} AND DOCTYPE({doc_type}) AND PUBYEAR > {year_range[0]} AND PUBYEAR < {year_range[1]}"
+            result = self.search_articles(query, count)
 
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
@@ -68,7 +69,7 @@ class DBCrawler(ScopusCrawler):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
             try:
                 record_count = 0
-                for record in self._scopus_search(keyword, doc_type, limit):
+                for record in self._scopus_search(keyword, doc_type, year_range, limit):
                     logger.info("Processing record", extra={'handler': 'progressHandler'})
                     if self.validate_record(record):
                         self.write_to_db(record)
@@ -91,7 +92,7 @@ class DBCrawler(ScopusCrawler):
 
         # null as default
 
-        
+
         parsed_article = {}
 
         # Extract 'authors' field if present
