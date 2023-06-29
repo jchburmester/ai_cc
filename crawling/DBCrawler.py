@@ -88,6 +88,10 @@ class DBCrawler(ScopusCrawler):
         Extract and format the relevant fields from a Scopus article
         """
 
+
+        # null as default
+
+        
         parsed_article = {}
 
         # Extract 'authors' field if present

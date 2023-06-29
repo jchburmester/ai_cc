@@ -6,8 +6,12 @@ import requests
 logger = logging.getLogger(__name__)
 skip_log = logging.getLogger("skipped")
 
+# save session, custom context managers
+# keep crawling, dublicates
+# manually delete database
+# error codes for requests, wrapping
+# vpn
 
-# why ABC class
 class ScopusCrawler:
     def __init__(self, scopus_keys):
         self._keys = scopus_keys
@@ -32,7 +36,7 @@ class ScopusCrawler:
                 params={
                     'query': keyword,
                     'count': count,
-                    'view': 'STANDARD'
+                    'view': 'COMPLETE'
                 }
             )
             print("Response:", response.text)
