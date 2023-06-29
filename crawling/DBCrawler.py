@@ -9,11 +9,11 @@ from typing import Generator, Any, List, Dict
 import sqlalchemy
 from sqlalchemy import create_engine, Table, MetaData
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import select
+from sqlalchemy.sql import select, func
 
 from requests import RequestException
 
-from ScopusCrawler import ScopusCrawler
+from .ScopusCrawler import ScopusCrawler
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ class DBCrawler(ScopusCrawler):
     def __init__(self, scopus_keys: list[str]):
         super().__init__(scopus_keys)
         
-        with open("db_config.yml", "r") as f:
+        with open("config/db_config.yml", "r") as f:
             conf = yaml.safe_load(f)
 
         db_url = f"postgresql+psycopg2://{conf['PG_USER']}:{conf['PG_PASSWORD']}@{conf['PG_HOST']}:{conf['PG_PORT']}/{conf['PG_DATABASE']}"
@@ -35,14 +35,15 @@ class DBCrawler(ScopusCrawler):
         try:
             with self.db_engine.connect() as connection:
                 connection.execute(self.table.insert(), data)
-        except sqlalchemy.exc.SQLAlchemyError as e:
+        except sqlalchemy.exc.SQLAlchemyError as e: 
             logger.error(f"Failed to write data to the database: {e}")
             raise
 
-    def _scopus_search(self, keyword: str, doc_type: str) -> Generator[Dict[str, Any], None, None]:
+    def _scopus_search(self, keyword: str, doc_type: str, limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
         count = 100
         total_results = None
+        processed_count = 0
 
         while total_results is None or page * count < total_results:
             result = self.search_articles(f"{keyword} AND DOCTYPE({doc_type})", count)
@@ -52,16 +53,27 @@ class DBCrawler(ScopusCrawler):
 
             for article in result['search-results']['entry']:
                 yield self.parse_article(article)
+                processed_count += 1
+
+                # Check if the limit is reached
+                if limit is not None and processed_count >= limit:
+                    return
 
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
+        limit = 10
+        
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
             try:
-                for record in self._scopus_search(keyword, doc_type):
+                record_count = 0
+                for record in self._scopus_search(keyword, doc_type, limit):
                     logger.info("Processing record", extra={'handler': 'progressHandler'})
                     self.write_to_db(record)
+                    record_count += 1
+                    # Log progress
+                    logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
                     logger.info("Data written to the database", extra={'handler': 'progressHandler'})
             except RequestException as e:
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
@@ -102,3 +114,11 @@ class DBCrawler(ScopusCrawler):
             parsed_article['subject_area'] = [subject['$'] for subject in article['subject-area']]
 
         return parsed_article
+
+
+    def check_database_entries(self):
+        with self.db_engine.connect() as conn:
+            count_alias = func.count().label('count')
+            query = select([count_alias]).select_from(self.table)
+            result = conn.execute(query).scalar()
+        return result

@@ -5,6 +5,6 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 ## Code structure
 
-`main.py` handles and runs all scripts \\
-`BaseScopusCrawler` handles most of the basic Scopus API interaction \\
-`ScopusCrawlerDB` saves the data into a SQLAlchemy database \\
+`main.py` handles and runs all scripts <br />
+`BaseScopusCrawler` handles most of the basic Scopus API interaction <br />
+`ScopusCrawlerDB` saves the data into a SQLAlchemy database <br />
