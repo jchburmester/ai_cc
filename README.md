@@ -8,3 +8,10 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 `main.py` handles and runs all scripts <br />
 `BaseScopusCrawler` handles most of the basic Scopus API interaction <br />
 `ScopusCrawlerDB` saves the data into a SQLAlchemy database <br />
+
+### Open
+
+subject areas; <br />
+None is fine?; <br />
+year min and max; <br />
+access & delete database

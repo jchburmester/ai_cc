@@ -41,12 +41,13 @@ class DBCrawler(ScopusCrawler):
 
     def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
-        count = 1
+        count = 10 # limits the number of results per page
         total_results = None
         processed_count = 0
 
         while total_results is None or page * count < total_results:
             query = f"{keyword} AND DOCTYPE({doc_type})"
+            
             result = self.search_articles(query, count)
 
             if total_results is None:
@@ -63,7 +64,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 1
+        limit = 10 # limits the number of articles per keyword and doc_type
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
@@ -156,14 +157,6 @@ class DBCrawler(ScopusCrawler):
             errors.append("keywords")
 
 
-        # Extract 'subject_area'
-        try:
-            parsed_article['subject_area'] = article.get('subject-area')
-        except (KeyError, TypeError):
-            errors.append("subject_area")
-
-
-
         #print("Abstract:", parsed_article['paper_abstract'])
         print("Title:", parsed_article['paper_title'])
         print("Abstract:", parsed_article['paper_abstract'])
@@ -174,7 +167,6 @@ class DBCrawler(ScopusCrawler):
         print("Country:", parsed_article['country'])
         print("Keywords:", parsed_article['keywords'])
         print("Cited by:", parsed_article['cited_by_count'])
-        print("Subject area:", parsed_article['subject_area'])
 
         if errors:
             logger.error(f"Error retrieving '{','.join(errors)}' in article='{article.get('dc:title')}'")
@@ -192,7 +184,7 @@ class DBCrawler(ScopusCrawler):
     def validate_record(self, record: Dict[str, Any]) -> bool:
     # Perform validation checks on the record
         #print(record)
-        if 'paper_title' not in record or 'paper_abstract' not in record or 'subject_area' not in record:
+        if 'paper_title' not in record or 'paper_abstract' not in record or 'authors' not in record or 'journal' not in record or 'year_of_publication' not in record or 'month_of_publication' not in record or 'country' not in record or 'keywords' not in record or 'cited_by_count' not in record:
             return False
               
         return True
