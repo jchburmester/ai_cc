@@ -16,6 +16,7 @@ CREATE TABLE papers
     title           TEXT,
     abstract        TEXT,
     year            SMALLINT,
+    month           SMALLINT,
     author_keywords TEXT[],
     cited_by        INTEGER,
     data            JSONB,

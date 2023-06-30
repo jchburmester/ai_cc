@@ -49,9 +49,6 @@ class DBCrawler(ScopusCrawler):
             query = f"{keyword} AND DOCTYPE({doc_type})"
             result = self.search_articles(query, count)
 
-            # Check if the query was successful
-            print("Result:", result)
-
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
 
@@ -91,41 +88,96 @@ class DBCrawler(ScopusCrawler):
         """
         Extract and format the relevant fields from a Scopus article
         """
-        # null as default
-
         parsed_article = {}
+        errors = list()
 
-        # Extract 'authors' field if present
-        if 'author' in article:
+        # Parsing with error handling
+        # Extract 'authors'
+        try:
             parsed_article['authors'] = [author.get('authid') for author in article['author']]
+        except (KeyError, TypeError):
+            errors.append("title")
 
-        if 'prism:coverDate' in article:
-            parsed_article['year_of_publication'] = article['prism:coverDate'][:4]  # Assuming date format is YYYY-MM-DD
 
-        parsed_article['journal'] = article.get('prism:publicationName')
+        # Extract 'year_of_publication'
+        try:
+            parsed_article['year_of_publication'] = article['prism:coverDate'][:4]
+        except (KeyError, TypeError):
+            errors.append("year_of_publication")
 
+
+        # Extract 'month_of_publication'
+        try:
+            parsed_article['month_of_publication'] = article['prism:coverDate'][5:7]
+        except (KeyError, TypeError):
+            errors.append("month_of_publication")
+
+
+        # Extract 'journal'
+        try:
+            parsed_article['journal'] = article.get('prism:publicationName')
+        except (KeyError, TypeError):
+            errors.append("journal")
+
+
+        # Extract 'country'
         if 'affiliation' in article and len(article['affiliation']) > 0:
-            parsed_article['country'] = article['affiliation'][0].get('affiliation-country')
+            try:
+                parsed_article['country'] = article['affiliation'][0].get('affiliation-country')
+            except (KeyError, TypeError):
+                errors.append("country")
 
-        parsed_article['paper_title'] = article.get('dc:title')
-        parsed_article['paper_abstract'] = article.get('dc:description')
-        parsed_article['cited_by_count'] = article.get('citedby-count')
-        parsed_article['keywords'] = article.get('authkeywords')
+
+        # Extract 'paper_title'
+        try:
+            parsed_article['paper_title'] = article.get('dc:title')
+        except (KeyError, TypeError):
+            errors.append("paper_title")
+
+
+        # Extract 'paper_abstract'
+        try:
+            parsed_article['paper_abstract'] = article.get('dc:description')
+        except (KeyError, TypeError):
+            errors.append("paper_abstract")
+
+
+        # Extract 'cited_by_count'
+        try:
+            parsed_article['cited_by_count'] = article.get('citedby-count')
+        except (KeyError, TypeError):
+            errors.append("cited_by_count")
+
+
+        # Extract 'keywords'
+        try:
+            parsed_article['keywords'] = article.get('authkeywords')
+        except (KeyError, TypeError):
+            errors.append("keywords")
+
+
+        # Extract 'subject_area'
+        try:
+            parsed_article['subject_area'] = article.get('subject-area')
+        except (KeyError, TypeError):
+            errors.append("subject_area")
+
+
 
         #print("Abstract:", parsed_article['paper_abstract'])
         print("Title:", parsed_article['paper_title'])
+        print("Abstract:", parsed_article['paper_abstract'])
         print("Authors:", parsed_article['authors'])
         print("Journal:", parsed_article['journal'])
         print("Year:", parsed_article['year_of_publication'])
+        print("Month:", parsed_article['month_of_publication'])
         print("Country:", parsed_article['country'])
         print("Keywords:", parsed_article['keywords'])
         print("Cited by:", parsed_article['cited_by_count'])
+        print("Subject area:", parsed_article['subject_area'])
 
-
-
-        # Extract 'subject_area' field if present
-        if 'subject-area' in article:
-            parsed_article['subject_area'] = [subject['$'] for subject in article['subject-area']]
+        if errors:
+            logger.error(f"Error retrieving '{','.join(errors)}' in article='{article.get('dc:title')}'")
 
         return parsed_article
 
