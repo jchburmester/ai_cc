@@ -2,11 +2,12 @@ from __future__ import annotations
 
 import logging
 import traceback
+import yaml
 import itertools
 from typing import Generator, Any, List, Dict
 
 import sqlalchemy
-from sqlalchemy import Table, MetaData
+from sqlalchemy import insert
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import select, func
 
@@ -21,17 +22,20 @@ logger = logging.getLogger(__name__)
 class DBCrawler(ScopusCrawler):
     def __init__(self, scopus_keys: list[str]):
         super().__init__(scopus_keys)
-        
+
         self.db_engine = DBwrapper()
-        self.metadata = MetaData()
-        self.table = Table('scopus_data', self.metadata, autoload_with=self.db_engine)
+        self.metadata = self.db_engine.base_type.metadata
+        self.table = self.db_engine.get_table('scopus_data')
+
 
     def write_to_db(self, data: List[Dict[str, Any]]):
         try:
-            # log data with comment
-            logger.info(f"Writing data to the database: {data}")
-            with self.db_engine.connect() as connection:
-                connection.execute(self.table.insert(), [data])
+            with SafeSession(self.db_engine, logger) as session:
+                logger.info(f"Writing data to the database...")
+                print(self.table.__table__.columns.keys())
+                insert_stmt = insert(self.table).values(data)
+                session.connection().execute(insert_stmt)
+
         except sqlalchemy.exc.SQLAlchemyError as e: 
             logger.error(f"Failed to write data to the database: {e}")
             raise
@@ -68,8 +72,6 @@ class DBCrawler(ScopusCrawler):
             try:
                 record_count = 0
                 for record in self._scopus_search(keyword, doc_type, year_range, limit):
-                    logger.info("Processing record", extra={'handler': 'progressHandler'})
-                    # log record with comment
                     logger.info(f"Processing record: {record}")
                     self.write_to_db(record)
                     record_count += 1

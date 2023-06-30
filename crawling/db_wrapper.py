@@ -22,10 +22,8 @@ class DBwrapper:
         with open("config/db_config.yml", "r") as f:
             conf = yaml.safe_load(f)        
 
-        self.engine: sqla.engine.base.Engine = sqla.create_engine("postgresql+psycopg2://"
-                                                                  + conf['PG_USER'] + ":" + conf['PG_PASSWORD'] + "@"
-                                                                  + conf['PG_HOST'] + ":" + conf['PG_PORT'] + "/"
-                                                                  + conf['PG_DATABASE'], echo=conf['PG_PORT'], pool_pre_ping=True)
+        db_string = f"postgresql+psycopg2://{conf['PG_USER']}:{conf['PG_PASSWORD']}@{conf['PG_HOST']}:{conf['PG_PORT']}/{conf['PG_DATABASE']}"
+        self.engine: sqla.engine.base.Engine = sqla.create_engine(db_string, echo=conf['SQL_DEBUG'], pool_pre_ping=True)
         self.base_type = automap_base()
         self.base_type.prepare(self.engine, reflect=True)
         self._Session = sessionmaker(bind=self.engine)
