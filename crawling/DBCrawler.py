@@ -147,9 +147,11 @@ class DBCrawler(ScopusCrawler):
 
         # Extract 'keywords'
         try:
-            parsed_article['author_keywords'] = article.get('authkeywords')
+            keywords_string = article.get('authkeywords')  # Get the keywords string
+            if keywords_string:
+                parsed_article['author_keywords'] = [keyword.strip() for keyword in keywords_string.split('|')]  # Split the string on '|'
         except (KeyError, TypeError):
-            errors.append("keywords")
+            errors.append("author_keywords")
 
         if errors:
             logger.error(f"Error retrieving '{','.join(errors)}' in article='{article.get('dc:title')}'")
