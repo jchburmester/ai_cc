@@ -28,7 +28,7 @@ class ScopusCrawler:
             'X-ELS-APIKey': self._keys[self._key_index]
         })
 
-    def search_articles(self, keyword, count=100):
+    def search_articles(self, keyword, count=1):
 
         try:
             response = self._session.get(
@@ -36,10 +36,11 @@ class ScopusCrawler:
                 params={
                     'query': keyword,
                     'count': count,
+                    'sort': 'citedby-count',
                     'view': 'COMPLETE'
                 }
             )
-            print("Response:", response.text)
+            #print("Response:", response.text)
             response.raise_for_status() 
             
             return response.json()  

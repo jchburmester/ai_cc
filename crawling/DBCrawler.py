@@ -41,13 +41,16 @@ class DBCrawler(ScopusCrawler):
 
     def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
-        count = 100
+        count = 1
         total_results = None
         processed_count = 0
 
         while total_results is None or page * count < total_results:
-            query = f"{keyword} AND DOCTYPE({doc_type}) AND PUBYEAR > {year_range[0]} AND PUBYEAR < {year_range[1]}"
+            query = f"{keyword} AND DOCTYPE({doc_type})"
             result = self.search_articles(query, count)
+
+            # Check if the query was successful
+            print("Result:", result)
 
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
@@ -63,7 +66,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 10
+        limit = 1
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
@@ -88,40 +91,37 @@ class DBCrawler(ScopusCrawler):
         """
         Extract and format the relevant fields from a Scopus article
         """
-
-
         # null as default
-
 
         parsed_article = {}
 
         # Extract 'authors' field if present
         if 'author' in article:
-            parsed_article['authors'] = [author['ce:indexed-name'] for author in article['author']]
+            parsed_article['authors'] = [author.get('authid') for author in article['author']]
 
-        # Extract 'year_of_publication' field if present
         if 'prism:coverDate' in article:
             parsed_article['year_of_publication'] = article['prism:coverDate'][:4]  # Assuming date format is YYYY-MM-DD
 
-        # Extract 'journal' field if present
         parsed_article['journal'] = article.get('prism:publicationName')
 
-        # Extract 'country' field if present
         if 'affiliation' in article and len(article['affiliation']) > 0:
             parsed_article['country'] = article['affiliation'][0].get('affiliation-country')
 
-        # Extract 'paper_title' field if present
         parsed_article['paper_title'] = article.get('dc:title')
-
-        # Extract 'paper_abstract' field if present
         parsed_article['paper_abstract'] = article.get('dc:description')
-
-        print("Abstract:", parsed_article['paper_abstract'])
-
-        # Extract 'keywords' field if present
+        parsed_article['cited_by_count'] = article.get('citedby-count')
         parsed_article['keywords'] = article.get('authkeywords')
 
+        #print("Abstract:", parsed_article['paper_abstract'])
+        print("Title:", parsed_article['paper_title'])
+        print("Authors:", parsed_article['authors'])
+        print("Journal:", parsed_article['journal'])
+        print("Year:", parsed_article['year_of_publication'])
+        print("Country:", parsed_article['country'])
         print("Keywords:", parsed_article['keywords'])
+        print("Cited by:", parsed_article['cited_by_count'])
+
+
 
         # Extract 'subject_area' field if present
         if 'subject-area' in article:
@@ -139,10 +139,8 @@ class DBCrawler(ScopusCrawler):
     # validating results
     def validate_record(self, record: Dict[str, Any]) -> bool:
     # Perform validation checks on the record
-        print(record)
+        #print(record)
         if 'paper_title' not in record or 'paper_abstract' not in record or 'subject_area' not in record:
             return False
-        
-        # Additional validation checks if needed
-        
+              
         return True
