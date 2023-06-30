@@ -27,12 +27,10 @@ class DBCrawler(ScopusCrawler):
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('scopus_data')
 
-
     def write_to_db(self, data: List[Dict[str, Any]]):
         try:
             with SafeSession(self.db_engine, logger) as session:
                 logger.info(f"Writing data to the database...")
-                print(self.table.__table__.columns.keys())
                 insert_stmt = insert(self.table).values(data)
                 session.connection().execute(insert_stmt)
 
@@ -142,14 +140,14 @@ class DBCrawler(ScopusCrawler):
 
         # Extract 'cited_by_count'
         try:
-            parsed_article['cited_by_count'] = article.get('citedby-count')
+            parsed_article['cited_by'] = article.get('citedby-count')
         except (KeyError, TypeError):
-            errors.append("cited_by_count")
+            errors.append("cited_by")
 
 
         # Extract 'keywords'
         try:
-            parsed_article['keywords'] = article.get('authkeywords')
+            parsed_article['author_keywords'] = article.get('authkeywords')
         except (KeyError, TypeError):
             errors.append("keywords")
 

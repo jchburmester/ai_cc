@@ -28,10 +28,10 @@ class DBwrapper:
         self.base_type.prepare(self.engine, reflect=True)
         self._Session = sessionmaker(bind=self.engine)
 
-    def get_table(self, table_name: str) -> type:
-        print("Available table names:", self.base_type.classes)
+    def get_table(self, table_name: str) -> sqla.Table:
+        print("Available table names:", self.base_type.metadata.tables)
 
-        return self.base_type.classes[table_name]
+        return self.base_type.metadata.tables[table_name]
 
     def create_session(self) -> Session:
         return self._Session()
