@@ -11,7 +11,5 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 ### Open
 
-subject areas; <br />
-None is fine?; <br />
+check for duplicates; <br />
 year min and max; <br />
-access & delete database

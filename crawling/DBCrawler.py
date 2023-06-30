@@ -27,14 +27,25 @@ class DBCrawler(ScopusCrawler):
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('scopus_data')
 
+    # Check for existing articles in the database
+    def article_exists(self, doi: str) -> bool:
+        with SafeSession(self.db_engine, logger) as session:
+            select_stmt = select(func.count()).where(self.table.c.doi == doi)
+            result = session.connection().scalar(select_stmt)
+            return result > 0
+
     def write_to_db(self, data: List[Dict[str, Any]]):
         try:
             with SafeSession(self.db_engine, logger) as session:
-                logger.info(f"Writing data to the database...")
-                insert_stmt = insert(self.table).values(data)
-                session.connection().execute(insert_stmt)
+                logger.info("Writing data to the database...")
 
-        except sqlalchemy.exc.SQLAlchemyError as e: 
+                if not self.article_exists(data['doi']):
+                    insert_stmt = insert(self.table).values(data)
+                    session.connection().execute(insert_stmt)
+                else:
+                    logger.info(f"Article with DOI {data['doi']} already exists in the database. Skipping insertion.")
+
+        except sqlalchemy.exc.SQLAlchemyError as e:
             logger.error(f"Failed to write data to the database: {e}")
             raise
 
@@ -53,6 +64,7 @@ class DBCrawler(ScopusCrawler):
                 total_results = int(result['search-results']['opensearch:totalResults'])
 
             for article in result['search-results']['entry']:
+
                 yield self.parse_article(article)
                 processed_count += 1
 
@@ -88,6 +100,14 @@ class DBCrawler(ScopusCrawler):
         errors = list()
 
         # Parsing with error handling
+
+        # Extract 'DOI'
+        try:
+            parsed_article['doi'] = article.get('prism:doi')
+        except (KeyError, TypeError):
+            errors.append("doi")
+            
+
         # Extract 'authors'
         try:
             parsed_article['authors'] = [author.get('authid') for author in article['author']]
