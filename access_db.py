@@ -14,7 +14,7 @@ try:
     cursor = conn.cursor()
 
     # Execute the query
-    cursor.execute("SELECT * FROM scopus_db")
+    cursor.execute("SELECT * FROM scopus_data")
 
     # Fetch all the records
     records = cursor.fetchall()

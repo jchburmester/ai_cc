@@ -2,18 +2,18 @@ from __future__ import annotations
 
 import logging
 import traceback
-import yaml
 import itertools
 from typing import Generator, Any, List, Dict
 
 import sqlalchemy
-from sqlalchemy import create_engine, Table, MetaData
+from sqlalchemy import Table, MetaData
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql import select, func
 
 from requests import RequestException
 
 from .ScopusCrawler import ScopusCrawler
+from .db_wrapper import DBwrapper, SafeSession
 
 logger = logging.getLogger(__name__)
 
@@ -22,26 +22,23 @@ class DBCrawler(ScopusCrawler):
     def __init__(self, scopus_keys: list[str]):
         super().__init__(scopus_keys)
         
-        with open("config/db_config.yml", "r") as f:
-            conf = yaml.safe_load(f)
-
-        db_url = f"postgresql+psycopg2://{conf['PG_USER']}:{conf['PG_PASSWORD']}@{conf['PG_HOST']}:{conf['PG_PORT']}/{conf['PG_DATABASE']}"
-        
-        self.db_engine = create_engine(db_url)
+        self.db_engine = DBwrapper()
         self.metadata = MetaData()
         self.table = Table('scopus_data', self.metadata, autoload_with=self.db_engine)
 
     def write_to_db(self, data: List[Dict[str, Any]]):
         try:
+            # log data with comment
+            logger.info(f"Writing data to the database: {data}")
             with self.db_engine.connect() as connection:
-                connection.execute(self.table.insert(), data)
+                connection.execute(self.table.insert(), [data])
         except sqlalchemy.exc.SQLAlchemyError as e: 
             logger.error(f"Failed to write data to the database: {e}")
             raise
 
     def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
-        count = 10 # limits the number of results per page
+        count = 1 # limits the number of results per page
         total_results = None
         processed_count = 0
 
@@ -64,7 +61,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 10 # limits the number of articles per keyword and doc_type
+        limit = 1 # limits the number of articles per keyword and doc_type
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
@@ -72,14 +69,12 @@ class DBCrawler(ScopusCrawler):
                 record_count = 0
                 for record in self._scopus_search(keyword, doc_type, year_range, limit):
                     logger.info("Processing record", extra={'handler': 'progressHandler'})
-                    if self.validate_record(record):
-                        self.write_to_db(record)
-                        record_count += 1
-                        # Log progress
-                        logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
-                        logger.info("Data written to the database", extra={'handler': 'progressHandler'})
-                    else:
-                        logger.warning("Invalid record. Skipping...", extra={'handler': 'progressHandler'})
+                    # log record with comment
+                    logger.info(f"Processing record: {record}")
+                    self.write_to_db(record)
+                    record_count += 1
+                    logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
+
             except RequestException as e:
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
                 continue
@@ -156,35 +151,7 @@ class DBCrawler(ScopusCrawler):
         except (KeyError, TypeError):
             errors.append("keywords")
 
-
-        #print("Abstract:", parsed_article['paper_abstract'])
-        print("Title:", parsed_article['paper_title'])
-        print("Abstract:", parsed_article['paper_abstract'])
-        print("Authors:", parsed_article['authors'])
-        print("Journal:", parsed_article['journal'])
-        print("Year:", parsed_article['year_of_publication'])
-        print("Month:", parsed_article['month_of_publication'])
-        print("Country:", parsed_article['country'])
-        print("Keywords:", parsed_article['keywords'])
-        print("Cited by:", parsed_article['cited_by_count'])
-
         if errors:
             logger.error(f"Error retrieving '{','.join(errors)}' in article='{article.get('dc:title')}'")
 
         return parsed_article
-
-    # not working
-    def check_database_entries(self):
-        with self.db_engine.connect() as conn:
-            query = select([func.count()]).select_from(self.table).scalar()
-            result = conn.execute(query)
-        return result
-    
-    # validating results
-    def validate_record(self, record: Dict[str, Any]) -> bool:
-    # Perform validation checks on the record
-        #print(record)
-        if 'paper_title' not in record or 'paper_abstract' not in record or 'authors' not in record or 'journal' not in record or 'year_of_publication' not in record or 'month_of_publication' not in record or 'country' not in record or 'keywords' not in record or 'cited_by_count' not in record:
-            return False
-              
-        return True

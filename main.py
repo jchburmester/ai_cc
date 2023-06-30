@@ -29,6 +29,3 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(traceback.format_exc())
         raise e
-    
-    #entries_count = crawler.check_database_entries()
-    #print(f"Number of entries in the database: {entries_count}")
