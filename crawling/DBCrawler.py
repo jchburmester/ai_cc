@@ -35,6 +35,8 @@ class DBCrawler(ScopusCrawler):
             return result > 0
 
     def write_to_db(self, data: List[Dict[str, Any]]):
+        dupilcates = []
+
         try:
             with SafeSession(self.db_engine, logger) as session:
                 logger.info("Writing data to the database...")
@@ -43,6 +45,7 @@ class DBCrawler(ScopusCrawler):
                     insert_stmt = insert(self.table).values(data)
                     session.connection().execute(insert_stmt)
                 else:
+                    dupilcates.append(data['doi'])
                     logger.info(f"Article with DOI {data['doi']} already exists in the database. Skipping insertion.")
 
         except sqlalchemy.exc.SQLAlchemyError as e:
@@ -51,7 +54,7 @@ class DBCrawler(ScopusCrawler):
 
     def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
-        count = 1 # limits the number of results per page
+        count = 25 # limits the number of results per page
         total_results = None
         processed_count = 0
 
@@ -75,7 +78,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 1 # limits the number of articles per keyword and doc_type
+        limit = 100 # limits the number of articles per keyword and doc_type
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
