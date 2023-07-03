@@ -61,11 +61,15 @@ class DBCrawler(ScopusCrawler):
             query = f"{keyword} AND DOCTYPE({doc_type})"
             
             result = self.search_articles(query, count)
+            logger.info(f"Search results for keyword '{keyword}' and doc_type '{doc_type}': {result}")
 
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
 
             for article in result['search-results']['entry']:
+
+                # log article features
+                logger.debug(f"Article: {article}")
 
                 yield self.parse_article(article)
                 processed_count += 1
@@ -135,6 +139,13 @@ class DBCrawler(ScopusCrawler):
             parsed_article['journal'] = article.get('prism:publicationName')
         except (KeyError, TypeError):
             errors.append("journal")
+
+        
+        # Extract 'aggregation_type'
+        try:
+            parsed_article['aggregation_type'] = article.get('prism:aggregationType')
+        except (KeyError, TypeError):
+            errors.append("aggregation_type")
 
 
         # Extract 'country'

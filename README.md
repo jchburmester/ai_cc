@@ -13,7 +13,7 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 year min and max; <br />
 accessing database for analysis; <br />
-specify source type (j, cp) & language (eng); <br />
+filter source type (j, cp) & language (eng); <br />
 
 ### SQL shorts
 ```

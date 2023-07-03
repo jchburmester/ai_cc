@@ -10,6 +10,7 @@ CREATE TABLE scopus_data
     year_of_publication     SMALLINT,
     month_of_publication    SMALLINT,
     journal                 TEXT,
+    aggregation_type        TEXT,
     country                 TEXT,
     paper_title             TEXT,
     paper_abstract          TEXT,
