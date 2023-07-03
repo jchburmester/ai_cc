@@ -1,17 +1,23 @@
 # climate change
 
-#- '("artificial intelligence" OR "artificial" OR "ai") AND "climate change"'
-#- '("machine learning" OR "ml") AND "climate change"'
-- '"deep learning" AND "climate change"'
+- '"artificial intelligence" AND "climate change"'
+#- '"machine learning" AND "climate change"'
+#- '"deep learning" AND "climate change"'
 
 # global warming
 
-#- '("artificial intelligence" OR "artificial" OR "ai") AND "global warming"'
-#- '("machine learning" OR "ml") AND "global warming"'
+#- '"artificial intelligence" AND "global warming"'
+#- '"machine learning" AND "global warming"'
 #- '"deep learning" AND "global warming"'
 
 # climate crisis
 
-#- '("artificial intelligence" OR "artificial" OR "ai") AND "climate crisis"'
-#- '("machine learning" OR "ml") AND "climate crisis"'
+#- '"artificial intelligence" AND "climate crisis"'
+#- '"machine learning" AND "climate crisis"'
 #- '"deep learning" AND "climate crisis"'
+
+# More specific
+
+# '"artificial intelligence" AND ("carbon footprint" OR "carbon emission*")'
+# '"machine learning" AND ("carbon footprint" OR "carbon emission*")'
+# '"deep learning" AND ("carbon footprint" OR "carbon emission*")'

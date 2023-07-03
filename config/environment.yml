@@ -15,3 +15,5 @@ dependencies:
     - psycopg2-binary
     - python-dotenv
     - joblib
+    - scikit-learn
+    - bertopic

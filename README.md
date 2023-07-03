@@ -11,12 +11,18 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 ### Open
 
+duplicates checking: account for null values in doi (check for other column such as title); <br />
 year min and max; <br />
-accessing database for analysis; <br />
 filter source type (j, cp) & language (eng); <br />
+author citations / references?
 
 ### SQL shorts
 ```
 psql -U postgres -h localhost -p 5432 -f C:\Users\jch\ai_cc\crawling\db_style.sql
+```
+
+### Updating environment
+```
+conda env update --prefix ./myenv --file environment.yml --prune
 ```
 

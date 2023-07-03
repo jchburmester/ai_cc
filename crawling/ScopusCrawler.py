@@ -6,11 +6,6 @@ import requests
 logger = logging.getLogger(__name__)
 skip_log = logging.getLogger("skipped")
 
-# save session, custom context managers
-# keep crawling, dublicates
-# manually delete database
-# error codes for requests, wrapping
-# vpn
 
 class ScopusCrawler:
     def __init__(self, scopus_keys):

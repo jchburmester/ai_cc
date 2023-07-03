@@ -9,3 +9,6 @@ SQLAlchemy==2.0.9
 psycopg2-binary
 python-dotenv
 joblib
+sklearn
+bertopic
+bertopic[spacy]

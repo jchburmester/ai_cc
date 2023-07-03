@@ -61,15 +61,11 @@ class DBCrawler(ScopusCrawler):
             query = f"{keyword} AND DOCTYPE({doc_type})"
             
             result = self.search_articles(query, count)
-            logger.info(f"Search results for keyword '{keyword}' and doc_type '{doc_type}': {result}")
 
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
 
             for article in result['search-results']['entry']:
-
-                # log article features
-                logger.debug(f"Article: {article}")
 
                 yield self.parse_article(article)
                 processed_count += 1
@@ -81,7 +77,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 100 # limits the number of articles per keyword and doc_type
+        limit = 1000 # limits the number of articles per keyword and doc_type
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
