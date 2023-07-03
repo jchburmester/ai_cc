@@ -35,7 +35,6 @@ class DBCrawler(ScopusCrawler):
             return result > 0
 
     def write_to_db(self, data: List[Dict[str, Any]]):
-        dupilcates = []
 
         try:
             with SafeSession(self.db_engine, logger) as session:
@@ -45,12 +44,12 @@ class DBCrawler(ScopusCrawler):
                     insert_stmt = insert(self.table).values(data)
                     session.connection().execute(insert_stmt)
                 else:
-                    dupilcates.append(data['doi'])
                     logger.info(f"Article with DOI {data['doi']} already exists in the database. Skipping insertion.")
 
         except sqlalchemy.exc.SQLAlchemyError as e:
             logger.error(f"Failed to write data to the database: {e}")
             raise
+
 
     def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
         page = 1
@@ -102,7 +101,7 @@ class DBCrawler(ScopusCrawler):
         parsed_article = {}
         errors = list()
 
-        # Parsing with error handling
+        # Parsing extracted article data
 
         # Extract 'DOI'
         try:

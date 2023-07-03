@@ -5,7 +5,7 @@ CREATE DATABASE ai_cc;
 
 CREATE TABLE scopus_data
 (
-    doi                     TEXT PRIMARY KEY,
+    doi                     TEXT,
     authors                 TEXT[],
     year_of_publication     SMALLINT,
     month_of_publication    SMALLINT,

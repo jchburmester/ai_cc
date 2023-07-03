@@ -14,3 +14,10 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 year min and max; <br />
 keep crawling even with null or none values; <br />
 accessing database for analysis; <br />
+
+### SQL shorts
+
+```
+psql -U postgres -h localhost -p 5432 -f C:\Users\jch\ai_cc\crawling\db_style.sql
+```
+
