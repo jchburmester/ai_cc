@@ -84,7 +84,6 @@ class DBCrawler(ScopusCrawler):
             try:
                 record_count = 0
                 for record in self._scopus_search(keyword, doc_type, year_range, limit):
-                    logger.info(f"Processing record: {record}")
                     self.write_to_db(record)
                     record_count += 1
                     logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
