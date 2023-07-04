@@ -59,13 +59,17 @@ class DBCrawler(ScopusCrawler):
         total_results = None
         processed_count = 0
 
+        year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
+        doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
+
         while total_results is None or page * count < total_results:
-            query = f"{keyword} AND DOCTYPE({doc_type})"
+            query = f"{keyword} AND {year_param_f} AND {doc_type_param_f}"
             
             result = self.search_articles(query, count)
 
             if total_results is None:
                 total_results = int(result['search-results']['opensearch:totalResults'])
+                logger.info(f"Total results for query '{query}': {total_results}")
 
             for article in result['search-results']['entry']:
 
