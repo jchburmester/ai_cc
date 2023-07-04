@@ -12,6 +12,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
 
 from dotenv import load_dotenv
+logging.getLogger('sqlalchemy').setLevel(logging.WARNING)
 
 
 class DBwrapper:
@@ -23,7 +24,8 @@ class DBwrapper:
             conf = yaml.safe_load(f)        
 
         db_string = f"postgresql+psycopg2://{conf['PG_USER']}:{conf['PG_PASSWORD']}@{conf['PG_HOST']}:{conf['PG_PORT']}/{conf['PG_DATABASE']}"
-        self.engine: sqla.engine.base.Engine = sqla.create_engine(db_string, echo=conf['SQL_DEBUG'], pool_pre_ping=True)
+        self.engine: sqla.engine.base.Engine = sqla.create_engine(db_string, echo=False, pool_pre_ping=True)
+        #self.engine: sqla.engine.base.Engine = sqla.create_engine(db_string, echo=conf['SQL_DEBUG'], pool_pre_ping=True)
         self.base_type = automap_base()
         self.base_type.prepare(self.engine, reflect=True)
         self._Session = sessionmaker(bind=self.engine)

@@ -11,10 +11,15 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 ### Open
 
-duplicates checking: account for null values in doi (check for other column such as title); <br />
-year min and max; <br />
-filter source type (j, cp) & language (eng); <br />
-author citations / references?
+- duplicates checking: account for null values in doi (check for other column such as title); <br />
+- year min and max; <br />
+- filter source type (j, cp) & language (eng) // when ds is generated..; <br />
+- author citations / references?
+- simple lda; <br />
+- simple ngrams; <br />
+- doc2vec; <br />
+- topic modelling (bertopic) + keyword extraction (keybert); <br />
+- changepoint analysis
 
 ### SQL shorts
 ```

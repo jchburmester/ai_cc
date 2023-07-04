@@ -5,15 +5,16 @@ dependencies:
   - pip:
     - pyyaml
     - requests==2.31.0
-    - pandas
+    - pandas==1.5.3
     - matplotlib
+    - ggplot
     - seaborn
-    - numpy
+    - nltk==3.8.1
+    - numpy==1.24.2
     - tqdm
     - requests-ratelimiter
     - SQLAlchemy==2.0.9
     - psycopg2-binary
-    - python-dotenv
+    - python-dotenv==1.0.0
     - joblib
-    - scikit-learn
-    - bertopic
+    - scikit-learn==1.2.2

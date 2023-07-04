@@ -18,6 +18,8 @@ from .db_wrapper import DBwrapper, SafeSession
 
 logger = logging.getLogger(__name__)
 
+logging.getLogger().setLevel(logging.INFO)
+
 
 class DBCrawler(ScopusCrawler):
     def __init__(self, scopus_keys: list[str]):
@@ -77,7 +79,7 @@ class DBCrawler(ScopusCrawler):
             page += 1
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 1000 # limits the number of articles per keyword and doc_type
+        limit = 10000 # limits the number of articles per keyword and doc_type
         
         for keyword, doc_type in itertools.product(keywords, doc_types):
             logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
