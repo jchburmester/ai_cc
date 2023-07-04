@@ -11,7 +11,6 @@ class ScopusCrawler:
     def __init__(self, scopus_keys):
         self._keys = scopus_keys
         self._key_index = 0
-        self.count = 25 # fixed
         self._session = requests.Session()
         self._session.headers.update({
             'Accept': 'application/json',
@@ -24,13 +23,15 @@ class ScopusCrawler:
             'X-ELS-APIKey': self._keys[self._key_index]
         })
 
-    def search_articles(self, keyword):
+    def search_articles(self, query, start, count):
+        logger.info(f"Searching for articles with start {start}")
         try:
             response = self._session.get(
                 'https://api.elsevier.com/content/search/scopus',
                 params={
-                    'query': keyword,
-                    'count': self.count,
+                    'query': query,
+                    'start': start,
+                    'count': count,
                     'sort': 'citedby-count',
                     'view': 'COMPLETE'
                 }
