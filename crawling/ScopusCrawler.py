@@ -11,6 +11,7 @@ class ScopusCrawler:
     def __init__(self, scopus_keys):
         self._keys = scopus_keys
         self._key_index = 0
+        self.count = 25 # fixed
         self._session = requests.Session()
         self._session.headers.update({
             'Accept': 'application/json',
@@ -23,14 +24,13 @@ class ScopusCrawler:
             'X-ELS-APIKey': self._keys[self._key_index]
         })
 
-    def search_articles(self, keyword, count=1):
-
+    def search_articles(self, keyword):
         try:
             response = self._session.get(
                 'https://api.elsevier.com/content/search/scopus',
                 params={
                     'query': keyword,
-                    'count': count,
+                    'count': self.count,
                     'sort': 'citedby-count',
                     'view': 'COMPLETE'
                 }
@@ -43,8 +43,8 @@ class ScopusCrawler:
         except requests.exceptions.HTTPError as err:
             if response.status_code == 429 and "Quota Exceeded" in response.text:
                 self.rotate_key()
-                return self.search_articles(keyword, count)
-            else:
+                return self.search_articles(keyword, self.count)
+            else:  
                 raise err
         except Exception as err:
             print(response.text)  # Print the response text

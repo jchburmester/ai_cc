@@ -28,6 +28,7 @@ class DBCrawler(ScopusCrawler):
         self.db_engine = DBwrapper()
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('scopus_data')
+        self.limit = 100 # limits the number of total articles at one instance of crawling
 
     # Check for existing articles in the database
     def article_exists(self, doi: str) -> bool:
@@ -52,47 +53,29 @@ class DBCrawler(ScopusCrawler):
             logger.error(f"Failed to write data to the database: {e}")
             raise
 
-
-    def _scopus_search(self, keyword: str, doc_type: str, year_range: tuple[int, int], limit: int = None) -> Generator[Dict[str, Any], None, None]:
-        page = 1
-        count = 25 # limits the number of results per page
-        total_results = None
-        processed_count = 0
-
-        year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
-        doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
-
-        while total_results is None or page * count < total_results:
-            query = f"{keyword} AND {year_param_f} AND {doc_type_param_f}"
+    def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
+        for keyword, doc_type in itertools.product(keywords, doc_types):
+            logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type} and year range {year_range}")
             
-            result = self.search_articles(query, count)
+            total_results = 0
+            page = 0
+            processed_count = 0
 
-            if total_results is None:
+            year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
+            doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
+            query = f"{keyword} AND {year_param_f} AND {doc_type_param_f}"
+
+            try:
+                result = self.search_articles(query)
                 total_results = int(result['search-results']['opensearch:totalResults'])
+                print(result['search-results'].keys())
+                print(result['search-results']['opensearch:itemsPerPage'])
                 logger.info(f"Total results for query '{query}': {total_results}")
 
-            for article in result['search-results']['entry']:
-
-                yield self.parse_article(article)
-                processed_count += 1
-
-                # Check if the limit is reached
-                if limit is not None and processed_count >= limit:
-                    return
-
-            page += 1
-
-    def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
-        limit = 10000 # limits the number of articles per keyword and doc_type
-        
-        for keyword, doc_type in itertools.product(keywords, doc_types):
-            logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type}")
-            try:
-                record_count = 0
-                for record in self._scopus_search(keyword, doc_type, year_range, limit):
-                    self.write_to_db(record)
-                    record_count += 1
-                    logger.info(f"Processed record {record_count}", extra={'handler': 'progressHandler'})
+                for article in result['search-results']['entry']:
+                    self.write_to_db(self.parse_article(article))
+                    processed_count += 1
+                    logger.info(f"Processed record {processed_count}", extra={'handler': 'progressHandler'})
 
             except RequestException as e:
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
