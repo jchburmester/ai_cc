@@ -44,7 +44,7 @@ class ScopusCrawler:
         except requests.exceptions.HTTPError as err:
             if response.status_code == 429 and "Quota Exceeded" in response.text:
                 self.rotate_key()
-                return self.search_articles(keyword, self.count)
+                return self.search_articles(query, self.count)
             else:  
                 raise err
         except Exception as err:
