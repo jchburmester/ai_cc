@@ -11,9 +11,7 @@ The goal is to provide a brief, high-level snapshot of how AI and ML intersect w
 
 ### Open
 
-- duplicates checking: account for null values in doi (check for other column such as title); <br />
-- year min and max; <br />
-- filter source type (j, cp) & language (eng) // when ds is generated..; <br />
+- filter source type (j, cp) & language (eng) // when ds is generated..
 - author citations / references?
 - simple lda; <br />
 - simple ngrams; <br />
