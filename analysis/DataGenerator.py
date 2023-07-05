@@ -29,10 +29,6 @@ class DataGenerator:
         df = self.preprocess_data()
         df = df[['doi', 'paper_abstract']]
         return df
-    
-    # Returning the dataframe as csv
-    def return_csv(self, df, filename):
-        df.to_csv(filename, index=False)
 
     # Split data for later training
     def generate_train_test_split(self, test_size=0.2, random_state=42):

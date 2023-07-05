@@ -18,7 +18,7 @@ if __name__ == "__main__":
         keywords = yaml.safe_load(f)
 
     doc_types = ["ar", "cp"]
-    year_range = (2023, 2023) # (both inclusive)
+    year_range = (2020, 2023) # (both inclusive)
 
     #logger.info(f"Starting search with n={len(keywords)} keywords")
 
@@ -26,6 +26,7 @@ if __name__ == "__main__":
     
     try:
         crawler.fetch(keywords, doc_types, year_range)
+        print(crawler.n_results)
     except Exception as e:
         logger.error(traceback.format_exc())
         raise e

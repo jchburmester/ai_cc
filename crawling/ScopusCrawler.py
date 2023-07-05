@@ -16,6 +16,7 @@ class ScopusCrawler:
             'Accept': 'application/json',
             'X-ELS-APIKey': self._keys[self._key_index]
         })
+        #self.search_params = {'query': {}, 'start': 0, 'count': 25}
 
     def rotate_key(self):
         self._key_index = (self._key_index + 1) % len(self._keys)
@@ -24,7 +25,7 @@ class ScopusCrawler:
         })
 
     def search_articles(self, query, start, count):
-        logger.info(f"Searching for articles with start {start}")
+        #logger.info(f"Searching for articles with start {start}")
         try:
             response = self._session.get(
                 'https://api.elsevier.com/content/search/scopus',
@@ -43,8 +44,15 @@ class ScopusCrawler:
         
         except requests.exceptions.HTTPError as err:
             if response.status_code == 429 and "Quota Exceeded" in response.text:
+                logger.warning("Quota exceeded. Rotating key...")
                 self.rotate_key()
                 return self.search_articles(query, self.count)
+            
+            elif response.status_code == 400 and "400 Client Error: Bad Request" in response.text:
+                skip_log.warning("400 Client Error: Bad Request")
+                self.rotate_key()
+                return self.search_articles(query, self.count)
+            
             else:  
                 raise err
         except Exception as err:

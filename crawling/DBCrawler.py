@@ -28,7 +28,9 @@ class DBCrawler(ScopusCrawler):
         self.db_engine = DBwrapper()
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('scopus_data')
-        self.limit = 400 # limits the number of total articles at one instance of crawling
+        self.limit = 20000 # limits the number of total articles at one instance of crawling
+        self.n_results = []
+        self.processed_records = 0
 
     # Check for existing articles in the database
     def article_exists(self, doi: str, paper_title: str) -> bool:
@@ -48,13 +50,14 @@ class DBCrawler(ScopusCrawler):
 
         try:
             with SafeSession(self.db_engine, logger) as session:
-                logger.info("Writing data to the database...")
+                #logger.info("Writing data to the database...")
 
                 if not self.article_exists(data['doi'], data['paper_title']):
                     insert_stmt = insert(self.table).values(data)
                     session.connection().execute(insert_stmt)
                 else:
-                    logger.info(f"Article with DOI {data['doi']} already exists in the database. Skipping insertion.")
+                    pass
+                    #logger.info(f"Article with DOI {data['doi']} already exists in the database. Skipping insertion.")
 
         except sqlalchemy.exc.SQLAlchemyError as e:
             logger.error(f"Failed to write data to the database: {e}")
@@ -78,12 +81,14 @@ class DBCrawler(ScopusCrawler):
                 result = self.search_articles(query, page, items_per_page)
                 total_results = int(result['search-results']['opensearch:totalResults'])
                 logger.info(f"Total results for query '{query}': {total_results}")
+                self.n_results.append(total_results)
 
                 while processed_count < total_results and processed_count < self.limit:
                     for article in result['search-results']['entry']:
                         self.write_to_db(self.parse_article(article))
                         processed_count += 1
-                        logger.info(f"Processed record {processed_count}", extra={'handler': 'progressHandler'})
+                        self.processed_records = processed_count
+                        #logger.info(f"Processed record {processed_count}", extra={'handler': 'progressHandler'})
 
                     # Move to the next page
                     page += items_per_page
@@ -93,6 +98,8 @@ class DBCrawler(ScopusCrawler):
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
                 continue
 
+            logger.info(f"Processed records for keyword {keyword} and doc_type {doc_type}: {self.processed_records}")
+            
 
     def parse_article(self, article: Dict[str, Any]) -> Dict[str, Any]:
         """
