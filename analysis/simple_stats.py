@@ -4,7 +4,12 @@ from nltk.corpus import stopwords
 
 # N-grams
 def generate_ngrams(data, n):
-    data = data.to_string(index=False)
+
+    if type(data) == list:
+        data = ' '.join(data)
+    else:
+        data = data.to_string(index=False)
+    
     words = data.split()
 
     ngrams_list = ngrams(words, n)
