@@ -37,6 +37,8 @@ class DBCrawler(ScopusCrawler):
     def article_exists(self, doi: str, paper_title: str) -> bool:
         with SafeSession(self.db_engine, logger) as session:
             if doi is None or doi == "None":
+                # log the processed records
+                logger.info(f"Processed records for keyword {paper_title}: {self.processed_records}")
                 select_stmt = select(func.count()).where(
                     (self.table.c.doi.is_(None)) &
                     (self.table.c.paper_title == paper_title)
