@@ -3,6 +3,8 @@ from __future__ import annotations
 import logging
 import requests
 
+from requests import RequestException
+
 logger = logging.getLogger(__name__)
 skip_log = logging.getLogger("skipped")
 
@@ -24,37 +26,33 @@ class ScopusCrawler:
             'X-ELS-APIKey': self._keys[self._key_index]
         })
 
-    def search_articles(self, query, start, count):
+    def search_articles(self, query, start, count, cursor):
         #logger.info(f"Searching for articles with start {start}")
         try:
+            
             response = self._session.get(
                 'https://api.elsevier.com/content/search/scopus',
                 params={
                     'query': query,
+                    'cursor': cursor,
                     'start': start,
                     'count': count,
                     'sort': 'citedby-count',
                     'view': 'COMPLETE'
                 }
             )
-            #print("Response:", response.text)
+
+            remaining_quota = int(response.headers.get("x-ratelimit-remaining", -1))
+            total_quota = int(response.headers.get("x-ratelimit-limit", -1))
+            logger.debug(f"Quota: {remaining_quota} / {total_quota}")
             response.raise_for_status() 
             
             return response.json()  
         
-        except requests.exceptions.HTTPError as err:
-            if response.status_code == 429 and "Quota Exceeded" in response.text:
-                logger.warning("Quota exceeded. Rotating key...")
-                self.rotate_key()
-                return self.search_articles(query, self.count)
-            
-            elif response.status_code == 400 and "400 Client Error: Bad Request" in response.text:
-                skip_log.warning("400 Client Error: Bad Request")
-                self.rotate_key()
-                return self.search_articles(query, self.count)
-            
-            else:  
-                raise err
+        except RequestException as err:
+            next_cursor: str = response["search-results"]["cursor"]["@next"]
+            return self.search_articles(query, start, count, next_cursor)
+
         except Exception as err:
-            print(response.text)  # Print the response text
+            print(response.text)
             raise err

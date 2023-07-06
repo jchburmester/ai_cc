@@ -6,6 +6,8 @@ from contextlib import AbstractContextManager
 from distutils.util import strtobool
 from typing import Optional
 
+import urllib.parse
+
 import sqlalchemy as sqla
 from sqlalchemy import exc
 from sqlalchemy.ext.automap import automap_base
@@ -70,3 +72,16 @@ class SafeSession(AbstractContextManager):
                     exc_info=exc_tb)
         self.session.close()
         # self.__db.remove_session() # TODO: needed?
+
+
+class FetchException(ConnectionRefusedError):
+    def __init__(self, code: int, text: str, url: str):
+        self.status_code = code
+        self.text = text
+        self.url = urllib.parse.unquote(url)
+
+    def __str__(self) -> str:
+        return f"Returned status code '{self.status_code}' in fetching URL='{self.url}'"
+
+    def __repr__(self) -> str:
+        return str(self)

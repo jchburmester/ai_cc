@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import requests
 import traceback
 import yaml
 import itertools
@@ -69,16 +70,14 @@ class DBCrawler(ScopusCrawler):
 
             total_results = 0
             processed_count = 0
-            page = 0
-            items_per_page = 25
+            cursor = "*"  # Initial cursor value
 
             year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
             doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
             query = f"{keyword} AND {year_param_f} AND {doc_type_param_f}"
 
             try:
-                # Fetch the first page of results
-                result = self.search_articles(query, page, items_per_page)
+                result = self.search_articles(query, 0, 25, cursor)
                 total_results = int(result['search-results']['opensearch:totalResults'])
                 logger.info(f"Total results for query '{query}': {total_results}")
                 self.n_results.append(total_results)
@@ -88,11 +87,10 @@ class DBCrawler(ScopusCrawler):
                         self.write_to_db(self.parse_article(article))
                         processed_count += 1
                         self.processed_records = processed_count
-                        #logger.info(f"Processed record {processed_count}", extra={'handler': 'progressHandler'})
 
-                    # Move to the next page
-                    page += items_per_page
-                    result = self.search_articles(query, page, items_per_page)
+                    # Update cursor and fetch next page
+                    cursor = result["search-results"]["cursor"]["@next"]
+                    result = self.search_articles(query, 0, 25, cursor)
 
             except RequestException as e:
                 logger.error(f"Failed to fetch data for keyword {keyword} and doc_type {doc_type}: {e}")
