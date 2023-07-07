@@ -18,26 +18,3 @@ df = data_generator.abstract_only()
 
 # Create csv file
 #df = df_to_csv(df, 'ai_cc_2018_2023.csv')
-
-# Generate ngrams
-bigrams = generate_ngrams(df['paper_abstract'], 2)
-trigrams = generate_ngrams(df['paper_abstract'], 3)
-fourgrams = generate_ngrams(df['paper_abstract'], 4)
-
-# Remove stopwords
-filtered_bigrams = remove_grams_with_stopwords(bigrams)
-filtered_trigrams = remove_grams_with_stopwords(trigrams)
-filtered_fourgrams = remove_grams_with_stopwords(fourgrams)
-
-# Count ngrams
-bigrams_counter = collections.Counter(filtered_bigrams)
-trigrams_counter = collections.Counter(filtered_trigrams)
-fourgrams_counter = collections.Counter(filtered_fourgrams)
-
-# Print most common ngrams
-print('Most common bigrams:')
-print(bigrams_counter.most_common(10))
-print('Most common trigrams:')
-print(trigrams_counter.most_common(10))
-print('Most common fourgrams:')
-print(fourgrams_counter.most_common(10))

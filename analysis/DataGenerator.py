@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 #from langdetect import detect
 #from sklearn import shuffle
 #from sklearn.model_selection import train_test_split
@@ -16,7 +17,7 @@ class DataGenerator:
     def __init__(self, df):
         self.df = df
 
-    def preprocess_data(self):
+    def preprocess_data(self, remove_stopwords=False) -> pd.DataFrame:
         df = self.df.copy()
         df = df[df['paper_abstract'].notna()]
         df = df[df['aggregation_type'].isin(['Journal', 'Conference Proceeding'])]
@@ -25,7 +26,7 @@ class DataGenerator:
         return df
     
     # Extract only abstracts and DOIs
-    def abstract_only(self):
+    def abstract_only(self) -> pd.DataFrame:
         df = self.preprocess_data()
         df = df[['doi', 'paper_abstract']]
         return df

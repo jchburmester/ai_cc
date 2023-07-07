@@ -3,7 +3,7 @@ import logging.config
 import yaml
 import traceback
 
-from crawling.DBCrawler import DBCrawler
+from crawling.CrawlingHandler import CrawlingHandler
 
 logging.config.fileConfig("log.ini", disable_existing_loggers=False)
 
@@ -20,9 +20,9 @@ if __name__ == "__main__":
     doc_types = ["ar", "cp"]
     year_range = (2020, 2023) # (both inclusive)
 
-    #logger.info(f"Starting search with n={len(keywords)} keywords")
+    logger.info(f"Starting search with n={len(keywords)} keywords")
 
-    crawler = DBCrawler(key_data['API_Keys'])
+    crawler = CrawlingHandler(key_data['API_Keys'])
     
     try:
         crawler.fetch(keywords, doc_types, year_range)

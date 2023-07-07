@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 skip_log = logging.getLogger("skipped")
 
 
-class ScopusCrawler:
+class BaseCrawler:
     def __init__(self, scopus_keys):
         self._keys = scopus_keys
         self._key_index = 0

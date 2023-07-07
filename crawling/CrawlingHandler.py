@@ -1,20 +1,15 @@
 from __future__ import annotations
 
 import logging
-import requests
-import traceback
-import yaml
 import itertools
-from typing import Generator, Any, List, Dict
-
 import sqlalchemy
-from sqlalchemy import insert
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.sql import select, func
 
+from typing import Any, List, Dict
+from sqlalchemy import insert
+from sqlalchemy.sql import select, func
 from requests import RequestException
 
-from .ScopusCrawler import ScopusCrawler
+from .BaseCrawler import BaseCrawler
 from .db_wrapper import DBwrapper, SafeSession
 
 logger = logging.getLogger(__name__)
@@ -22,7 +17,8 @@ logger = logging.getLogger(__name__)
 logging.getLogger().setLevel(logging.INFO)
 
 
-class DBCrawler(ScopusCrawler):
+class CrawlingHandler(BaseCrawler):
+
     def __init__(self, scopus_keys: list[str]):
         super().__init__(scopus_keys)
 

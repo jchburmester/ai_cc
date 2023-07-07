@@ -2,18 +2,17 @@
 
 import logging
 import yaml
-from contextlib import AbstractContextManager
-from distutils.util import strtobool
-from typing import Optional
-
 import urllib.parse
-
 import sqlalchemy as sqla
+
+from contextlib import AbstractContextManager
+from typing import Optional
 from sqlalchemy import exc
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
 
 from dotenv import load_dotenv
+
 logging.getLogger('sqlalchemy').setLevel(logging.WARNING)
 
 
