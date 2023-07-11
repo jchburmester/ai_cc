@@ -36,11 +36,3 @@ class DataGenerator:
         df = self.preprocess_data()
         df = df[columns]
         return df
-
-    # Split data for later training
-    def generate_train_test_split(self, test_size=0.2, random_state=42):
-        preprocessed_df = self.preprocess_data()
-        # preprocessed_df = self.abstract_only()
-        preprocessed_df = shuffle(preprocessed_df, random_state=random_state)
-        train_df, test_df = train_test_split(preprocessed_df, test_size=test_size, random_state=random_state)
-        return train_df, test_df

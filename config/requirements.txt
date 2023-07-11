@@ -1,0 +1,12 @@
+python
+numpy
+scipy
+pandas
+matplotlib
+bertopic
+sentence_transformers
+umap
+sklearn
+requests
+nltk
+spacy

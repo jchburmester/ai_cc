@@ -1,8 +1,16 @@
-from analysis.DatabaseHandler import DatabaseHandler
-from analysis.DataGenerator import DataGenerator
-from analysis.simple_stats import generate_ngrams, remove_stopwords, remove_grams_with_stopwords
-from analysis.utils import df_to_csv
-import collections
+from data_handling.DatabaseHandler import DatabaseHandler
+from data_handling.DataGenerator import DataGenerator
+import os
+
+# Returning a dataframe as csv
+def df_to_csv(df, filename):
+    dir = 'files'
+
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+    file_path = os.path.join(dir, filename)
+    df.to_csv(file_path, index=False)
 
 # Get data from database
 db_handler = DatabaseHandler('postgresql://postgres:ai_cc_23@localhost:5432/ai_cc')
