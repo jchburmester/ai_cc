@@ -1,23 +1,23 @@
 name: ai_cc
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   - pip:
     - pyyaml
+    - pandas==1.2.4
+    - numpy==1.20.3
+    - scikit-learn==0.24.2
+    - matplotlib==3.4.2
+    - spacy==3.0.6
     - requests==2.31.0
-    - pandas==1.5.3
     - nltk==3.8.1
-    - numpy==1.24.2
-    - tqdm
     - requests-ratelimiter
     - SQLAlchemy==2.0.9
     - psycopg2-binary
     - python-dotenv==1.0.0
     - joblib
-    - scikit-learn==1.2.2
     - sentence-transformers
-    - umap-learn
-    - matplotlib
+    - umap
     - scipy
-    #- ggplot
-    #- seaborn
+    - bertopic
+    - sentence-transformers
