@@ -30,6 +30,12 @@ class DataGenerator:
         df = self.preprocess_data()
         df = df[['doi', 'paper_abstract']]
         return df
+    
+    # Extract specific columns based on function parameters
+    def extract_columns(self, columns: list) -> pd.DataFrame:
+        df = self.preprocess_data()
+        df = df[columns]
+        return df
 
     # Split data for later training
     def generate_train_test_split(self, test_size=0.2, random_state=42):
