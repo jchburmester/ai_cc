@@ -1,5 +1,5 @@
-from data_handling.DatabaseHandler import DatabaseHandler
-from data_handling.DataGenerator import DataGenerator
+from DatabaseHandler import DatabaseHandler
+from DataGenerator import DataGenerator
 import os
 
 # Returning a dataframe as csv
@@ -22,7 +22,7 @@ df = db_handler.get_dataframe_from_table('scopus_data', column_names)
 
 # Get data
 data_generator = DataGenerator(df)
-df = data_generator.abstract_only()
+df = data_generator.preprocess_data()
 
 # Create csv file
-#df = df_to_csv(df, 'ai_cc_2018_2023.csv')
+df = df_to_csv(df, 'ai_cc_2018_2023_all.csv')
