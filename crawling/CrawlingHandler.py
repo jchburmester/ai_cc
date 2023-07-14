@@ -24,8 +24,8 @@ class CrawlingHandler(BaseCrawler):
 
         self.db_engine = DBwrapper()
         self.metadata = self.db_engine.base_type.metadata
-        self.table = self.db_engine.get_table('scopus_data')
-        self.limit = 20000 # limits the number of total articles at one instance of crawling
+        self.table = self.db_engine.get_table('ai_cc_sust_1407')
+        self.limit = 100000 # limits the number of total articles at one instance of crawling
         self.n_results = []
         self.processed_records = 0
 
@@ -34,7 +34,7 @@ class CrawlingHandler(BaseCrawler):
         with SafeSession(self.db_engine, logger) as session:
             if doi is None or doi == "None":
                 # log the processed records
-                logger.info(f"Processed records for keyword {paper_title}: {self.processed_records}")
+                #logger.info(f"Processed records for keyword {paper_title}: {self.processed_records}")
                 select_stmt = select(func.count()).where(
                     (self.table.c.doi.is_(None)) &
                     (self.table.c.paper_title == paper_title)
@@ -64,7 +64,8 @@ class CrawlingHandler(BaseCrawler):
 
     def fetch(self, keywords: list[str], doc_types: list[str], year_range: tuple[int, int]) -> None:
         for keyword, doc_type in itertools.product(keywords, doc_types):
-            logger.info(f"Fetching data for keyword {keyword} and doc_type {doc_type} and year range {year_range}")
+            logger.info(f"Fetching data for keyword {keyword}")
+            # include this if required:  and doc_type {doc_type} and year range {year_range}
 
             total_results = 0
             processed_count = 0
@@ -72,7 +73,8 @@ class CrawlingHandler(BaseCrawler):
 
             year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
             doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
-            query = f"{keyword} AND {year_param_f} AND {doc_type_param_f}"
+            query = f"{keyword}"
+            # include this if required:  AND {year_param_f} AND {doc_type_param_f}
 
             try:
                 result = self.search_articles(query, 0, 25, cursor)

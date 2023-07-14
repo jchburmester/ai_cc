@@ -18,7 +18,7 @@ if __name__ == "__main__":
         keywords = yaml.safe_load(f)
 
     doc_types = ["ar", "cp"]
-    year_range = (2020, 2023) # (both inclusive)
+    year_range = (1990, 2023) # (both inclusive)
 
     logger.info(f"Starting search with n={len(keywords)} keywords")
 

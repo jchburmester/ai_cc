@@ -44,7 +44,7 @@ class BaseCrawler:
 
             remaining_quota = int(response.headers.get("x-ratelimit-remaining", -1))
             total_quota = int(response.headers.get("x-ratelimit-limit", -1))
-            logger.debug(f"Quota: {remaining_quota} / {total_quota}")
+            #logger.debug(f"Quota: {remaining_quota} / {total_quota}")
             response.raise_for_status() 
             
             return response.json()  

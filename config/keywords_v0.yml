@@ -1,6 +1,8 @@
 # climate change
 
-- '"artificial intelligence" AND "climate change"'
+- '(TITLE-ABS-KEY(artificial intelligence) OR TITLE-ABS-KEY(machine learning) OR TITLE-ABS-KEY(deep learning)) AND (TITLE-ABS-KEY(climate change) OR TITLE-ABS-KEY(sustainab*) OR TITLE-ABS-KEY(climate crisis) OR TITLE-ABS-KEY(global warming) OR TITLE-ABS-KEY(climate action))'
+
+#- '"artificial intelligence" AND "climate change"'
 #- '"machine learning" AND "climate change"'
 #- '"deep learning" AND "climate change"'
 
