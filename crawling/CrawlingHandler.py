@@ -73,8 +73,8 @@ class CrawlingHandler(BaseCrawler):
 
             year_param_f = f"(PUBYEAR AFT {year_range[0] - 1} AND PUBYEAR BEF {year_range[1] + 1})" if year_range[0] and year_range[1] else ""
             doc_type_param_f = f"DOCTYPE({doc_type})" if doc_type else ""
-            query = f"{keyword}"
-            # include this if required:  AND {year_param_f} AND {doc_type_param_f}
+            query = f"{keyword} AND {doc_type_param_f}"
+            # include this if required:  AND {year_param_f} 
 
             try:
                 result = self.search_articles(query, 0, 25, cursor)
