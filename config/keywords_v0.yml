@@ -1,25 +1,5 @@
 # climate change
 
-- '(TITLE-ABS-KEY(artificial intelligence) OR TITLE-ABS-KEY(machine learning) OR TITLE-ABS-KEY(deep learning)) AND (TITLE-ABS-KEY(climate change) OR TITLE-ABS-KEY(sustainab*) OR TITLE-ABS-KEY(climate crisis) OR TITLE-ABS-KEY(global warming) OR TITLE-ABS-KEY(climate action))'
-
-#- '"artificial intelligence" AND "climate change"'
-#- '"machine learning" AND "climate change"'
-#- '"deep learning" AND "climate change"'
-
-# global warming
-
-#- '"artificial intelligence" AND "global warming"'
-#- '"machine learning" AND "global warming"'
-#- '"deep learning" AND "global warming"'
-
-# climate crisis
-
-#- '"artificial intelligence" AND "climate crisis"'
-#- '"machine learning" AND "climate crisis"'
-#- '"deep learning" AND "climate crisis"'
-
-# More specific
-
-# '"artificial intelligence" AND ("carbon footprint" OR "carbon emission*")'
-# '"machine learning" AND ("carbon footprint" OR "carbon emission*")'
-# '"deep learning" AND ("carbon footprint" OR "carbon emission*")'
+#- '(TITLE-ABS-KEY(artificial intelligence) OR TITLE-ABS-KEY(machine learning) OR TITLE-ABS-KEY(deep learning)) AND (TITLE-ABS-KEY(climate change) OR TITLE-ABS-KEY(sustainab*) OR TITLE-ABS-KEY(climate crisis) OR TITLE-ABS-KEY(global warming) OR TITLE-ABS-KEY(climate action))'
+#- '(TITLE-ABS-KEY(artificial intelligence) OR TITLE-ABS-KEY(machine learning) OR TITLE-ABS-KEY(deep learning)) AND (TITLE-ABS-KEY(climate change) OR TITLE-ABS-KEY(climate crisis) OR TITLE-ABS-KEY(global warming) OR TITLE-ABS-KEY(climate action))'
+- '(TITLE-ABS-KEY("artificial intelligence") OR TITLE-ABS-KEY("machine learning") OR TITLE-ABS-KEY("deep learning")) AND (TITLE-ABS-KEY("climate change") OR TITLE-ABS-KEY("climate crisis") OR TITLE-ABS-KEY("global warming") OR TITLE-ABS-KEY("climate action") OR (TITLE-ABS-KEY(sustainab*) AND TITLE-ABS-KEY(environment)) OR (TITLE-ABS-KEY(sustainab*) AND TITLE-ABS-KEY(climate))) AND ( LIMIT-TO ( LANGUAGE,"English" ) )'

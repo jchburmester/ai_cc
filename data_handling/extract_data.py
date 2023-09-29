@@ -18,11 +18,11 @@ db_handler = DatabaseHandler('postgresql://postgres:ai_cc_23@localhost:5432/ai_c
 column_names = ['doi', 'authors', 'year_of_publication', 'month_of_publication', 'journal',
                 'aggregation_type', 'country', 'paper_title', 'paper_abstract', 'cited_by', 'author_keywords']
 
-df = db_handler.get_dataframe_from_table('ai_cc_sust_1407', column_names)
+df = db_handler.get_dataframe_from_table('ai_cc_2607', column_names)
 
 # Get data
 data_generator = DataGenerator(df)
 df = data_generator.preprocess_data()
 
 # Create csv file
-df = df_to_csv(df, 'ai_cc_sust_1407.csv')
+df = df_to_csv(df, 'ai_cc_2607.csv')

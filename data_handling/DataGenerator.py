@@ -21,8 +21,11 @@ class DataGenerator:
         df = self.df.copy()
         df = df[df['paper_abstract'].notna()]
         df = df[df['aggregation_type'].isin(['Journal', 'Conference Proceeding'])]
-        df['paper_abstract'] = df['paper_abstract'].str.lower()
         df.loc[df['doi'].isna(), 'doi'] = df['doi'].apply(lambda x: str(np.random.randint(1e8)))
+        df['paper_abstract'] = df['paper_abstract'].str.replace('"', '')
+        df['paper_abstract'] = df['paper_abstract'].str.replace("'", '')
+        df['paper_title'] = df['paper_title'].str.replace('"', '')
+        df['paper_title'] = df['paper_title'].str.replace("'", '')
         return df
     
     # Extract only abstracts and DOIs
