@@ -5,8 +5,6 @@ The goal is to provide a brief, high-level snapshot of how AI, ML, and DL inters
 
 ![Clustering of 8,191 documents involving the keywords "AI", "ML", or "DL" on one hand and the keywords "climate change", "climate crisis", or "climate action" on the other hand.](report/img/macro_clusters_final.png)
 
-Image source: https://hub.jhu.edu/2023/03/07/artificial-intelligence-combat-climate-change/
-
 ## Code structure
 The `crawling` folder contains all scripts to crawl the Scopus database for articles and consequently store those in an SQL database:<br />
 
