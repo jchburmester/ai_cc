@@ -13,15 +13,3 @@ The `crawling` folder contains all scripts to crawl the Scopus database for arti
 `ScopusCrawlerDB` saves the data into an SQLAlchemy database <br />
 
 Due to local computing constraints, the analysis (Topic Modelling, Clustering, Text analysis) was run in Google Colab. The notebook can be found in the `analysis` folder.
-
-## Some useful commands
-### SQL shorts
-```
-psql -U postgres -h localhost -p 5432 -f C:\Users\jch\ai_cc\crawling\db_style.sql
-```
-
-### Updating environment
-```
-conda env update --prefix ./myenv --file environment.yml --prune
-```
-
