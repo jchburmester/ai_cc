@@ -25,7 +25,7 @@ class CrawlingHandler(BaseCrawler):
         self.db_engine = DBwrapper()
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('ai_cc_2602')
-        self.limit = 100 # limits the number of total articles at one instance of crawling
+        self.limit = 100000 # limits the number of total articles at one instance of crawling
         self.n_results = []
         self.processed_records = 0
 
@@ -114,13 +114,11 @@ class CrawlingHandler(BaseCrawler):
         except (KeyError, TypeError):
             errors.append("doi")
             
-
         # Extract 'authors'
         try:
             parsed_article['authors'] = [author.get('authid') for author in article['author']]
         except (KeyError, TypeError):
             errors.append("title")
-
 
         # Extract 'year_of_publication'
         try:
@@ -128,13 +126,11 @@ class CrawlingHandler(BaseCrawler):
         except (KeyError, TypeError):
             errors.append("year_of_publication")
 
-
         # Extract 'month_of_publication'
         try:
             parsed_article['month_of_publication'] = article['prism:coverDate'][5:7]
         except (KeyError, TypeError):
             errors.append("month_of_publication")
-
 
         # Extract 'journal'
         try:

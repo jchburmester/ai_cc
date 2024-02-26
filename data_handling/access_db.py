@@ -7,7 +7,7 @@ try:
         port="5432",
         dbname="ai_cc",
         user="postgres",
-        password="ai_cc_23"
+        password="ai_cc_24"
     )
 
     # Create a cursor
