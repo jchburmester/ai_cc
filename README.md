@@ -5,6 +5,12 @@ The goal is to provide a brief, high-level snapshot of how AI, ML, and DL inters
 
 ![Clustering of 8,191 documents involving the keywords "AI", "ML", or "DL" on one hand and the keywords "climate change", "climate crisis", or "climate action" on the other hand.](report/img/macro_clusters_final.png)
 
+## SQL commands
+To create a new table in SQL:
+"""
+psql -U postgres -h localhost -p 5432 -f "C:\Users\jch\ai_cc\crawling\db_style.sql"
+"""
+
 ## Code structure
 The `crawling` folder contains all scripts to crawl the Scopus database for articles and consequently store those in an SQL database:<br />
 

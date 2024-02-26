@@ -3,7 +3,7 @@ CREATE DATABASE ai_cc;
 \c ai_cc;
 
 
-CREATE TABLE ai_cc_2607
+CREATE TABLE ai_cc_2602
 (
     doi                     TEXT,
     authors                 TEXT[],

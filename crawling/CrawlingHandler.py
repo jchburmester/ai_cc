@@ -25,7 +25,7 @@ class CrawlingHandler(BaseCrawler):
         self.db_engine = DBwrapper()
         self.metadata = self.db_engine.base_type.metadata
         self.table = self.db_engine.get_table('ai_cc_2607')
-        self.limit = 100000 # limits the number of total articles at one instance of crawling
+        self.limit = 100 # limits the number of total articles at one instance of crawling
         self.n_results = []
         self.processed_records = 0
 
